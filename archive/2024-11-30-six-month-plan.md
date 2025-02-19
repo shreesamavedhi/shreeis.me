@@ -48,4 +48,4 @@ Oh, and as a bonus of how I'll be tracking attendance: After each week of "lesso
 
 While this is perhaps the most cringe thing I've had to do for my goals, it's necessary. 
 
-I have **5 years, 11 months, and 3 days.**
+I have **5 years, 11 months, and 3 days.** -->
