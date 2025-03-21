@@ -19,7 +19,7 @@ title: Shree Is Me # the main title
 tagline: Personal Blog # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Documentation of my personal projects, goals, and acheivements
+  Documentation of my personal projects, goals, and achievements
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -98,7 +98,8 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://media.licdn.com/dms/image/v2/D5603AQEnPqkKSYBU4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730312350466?e=1736985600&v=beta&t=Mkq6eNbWckGgeC2dX96ebL_5mEjcVlrFAQrIGetgV6I
+avatar: https://raw.githubusercontent.com/shreesamavedhi/shreeis.me/refs/heads/main/assets/img/shreeProfile-crop.jpg
+# https://media.licdn.com/dms/image/v2/D5603AQEnPqkKSYBU4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730312350466?e=1736985600&v=beta&t=Mkq6eNbWckGgeC2dX96ebL_5mEjcVlrFAQrIGetgV6I
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
