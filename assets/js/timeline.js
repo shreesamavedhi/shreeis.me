@@ -21,6 +21,7 @@ function initTimeline(timelineId) {
   timelineItems.forEach(item => {
     item.addEventListener('click', function() {
       setActiveItem(this, timelineId);
+      scrollToCenter(this, timelineId);
     });
   });
   
@@ -30,12 +31,58 @@ function initTimeline(timelineId) {
   const itemsContainer = timeline.querySelector('.timeline-items-container');
   
   if (scrollLeftBtn && scrollRightBtn && itemsContainer) {
+    // Manage scroll button visibility
+    updateScrollButtonVisibility(itemsContainer, scrollLeftBtn, scrollRightBtn);
+    
+    // Check scroll position on scroll event
+    itemsContainer.addEventListener('scroll', function() {
+      updateScrollButtonVisibility(itemsContainer, scrollLeftBtn, scrollRightBtn);
+    });
+    
+    // Scroll buttons functionality
     scrollLeftBtn.addEventListener('click', function() {
-      itemsContainer.scrollBy({ left: -200, behavior: 'smooth' });
+      const scrollAmount = itemsContainer.clientWidth * 0.75;
+      itemsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
     
     scrollRightBtn.addEventListener('click', function() {
-      itemsContainer.scrollBy({ left: 200, behavior: 'smooth' });
+      const scrollAmount = itemsContainer.clientWidth * 0.75;
+      itemsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    
+    // Make sure active item is visible
+    const activeItem = timeline.querySelector('.timeline-item.active');
+    if (activeItem) {
+      scrollToCenter(activeItem, timelineId);
+    }
+  }
+}
+
+// Show/hide scroll buttons based on scroll position
+function updateScrollButtonVisibility(container, leftBtn, rightBtn) {
+  const isAtStart = container.scrollLeft <= 10;
+  const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+  
+  leftBtn.style.opacity = isAtStart ? '0.3' : '1';
+  rightBtn.style.opacity = isAtEnd ? '0.3' : '1';
+  leftBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+  rightBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+}
+
+// Scroll to make an item centered in view
+function scrollToCenter(item, timelineId) {
+  const timeline = document.getElementById(timelineId);
+  const container = timeline.querySelector('.timeline-items-container');
+  
+  if (container) {
+    const containerWidth = container.clientWidth;
+    const itemWidth = item.offsetWidth;
+    const itemLeft = item.offsetLeft;
+    const scrollLeft = itemLeft - (containerWidth / 2) + (itemWidth / 2);
+    
+    container.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth'
     });
   }
 }
