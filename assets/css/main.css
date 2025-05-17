@@ -493,58 +493,135 @@ img {
 
 .timeline-items-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Horizontal Timeline */
+.timeline {
+  position: relative;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.timeline-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline-scroll-btn {
+  background: rgba(46, 204, 113, 0.2);
+  color: var(--primary-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.timeline-scroll-btn:hover {
+  background: rgba(46, 204, 113, 0.4);
+}
+
+.timeline-items-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.timeline-items-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .timeline-item {
+  flex: 0 0 auto;
+  padding: 15px 20px;
+  margin-right: 15px;
+  border-radius: 8px;
+  background: #111111;
+  cursor: pointer;
   position: relative;
-  width: 100%;
-  margin-bottom: 30px;
-  display: block;
-  border-bottom: 1px solid rgba(46, 204, 113, 0.3);
-  padding-bottom: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  white-space: nowrap;
+  min-width: 150px;
+  text-align: center;
 }
 
-.timeline-icon {
-  display: none;
+.timeline-item.active {
+  background: rgba(46, 204, 113, 0.2);
+  border-color: var(--primary-color);
+}
+
+.timeline-item-year {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.timeline-item-title {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  white-space: normal;
+  width: 100%;
+}
+
+.timeline-content-container {
+  position: relative;
+  background: #111111;
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  min-height: 300px;
 }
 
 .timeline-content {
-  background: transparent;
-  padding: 0;
-  position: relative;
-  width: 100%;
+  display: none;
+  animation: fadeIn 0.5s;
 }
 
-.timeline-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.timeline-content.active {
+  display: block;
 }
 
-.timeline-content::after {
-  content: none; /* Remove triangle */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .timeline-content h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #2ecc71;
+  color: var(--primary-color);
   margin-bottom: 12px;
+}
+
+.timeline-header {
+  margin-bottom: 15px;
 }
 
 .timeline-date {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #2ecc71;
+  color: var(--primary-color);
   margin-bottom: 12px;
-  padding-right: 10px;
-  margin-right: 10px;
-  border-right: 2px solid #2ecc71;
 }
 
 .timeline-institution,
