@@ -8,17 +8,127 @@
     --text: #FFFFFF;
 }
 
-/* Geometric Shapes */
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-image-container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-image-flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.about-image-container:hover .about-image-flipper {
+    transform: rotateY(180deg);
+}
+
+.about-image-front,
+.about-image-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 3px solid var(--primary);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+}
+
+.about-image-back {
+    transform: rotateY(180deg);
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--primary);
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+/* Geometric Shapes and Animations */
+@keyframes fadeInRotate {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        opacity: 0.15;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+}
+
+/* Hero section shapes */
 .hero::before {
     content: '';
     position: absolute;
     width: 300px;
     height: 300px;
-    border: 2px solid var(--accent1);
+    border: 2px solid #a200ff;
     transform: rotate(45deg);
     top: -150px;
     right: -150px;
-    opacity: 0.1;
+    opacity: 0.15;
+    animation: fadeInRotate 1s ease-out;
 }
 
 .hero::after {
@@ -26,11 +136,18 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    border: 2px solid var(--secondary);
+    border: 2px solid #ff0097;
     border-radius: 50%;
     bottom: -100px;
     left: -100px;
-    opacity: 0.1;
+    opacity: 0.15;
+    animation: fadeInScale 1s ease-out;
+}
+
+/* Skills section shapes */
+.skills {
+    position: relative;
+    overflow: hidden;
 }
 
 .skills::before {
@@ -38,11 +155,53 @@
     position: absolute;
     width: 150px;
     height: 150px;
-    border: 2px solid var(--accent2);
+    border: 2px solid #1ba1e2;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     top: 50px;
     right: 50px;
-    opacity: 0.1;
+    opacity: 0;
+    animation: fadeInScale 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+/* Experience section shapes */
+.experience {
+    position: relative;
+    overflow: hidden;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #00aba9;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    top: 30%;
+    left: -100px;
+    opacity: 0;
+    animation: fadeInScale 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+/* Projects section shapes */
+.projects {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #f09609;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    bottom: 50px;
+    right: -90px;
+    opacity: 0;
+    animation: fadeInScale 0.8s ease-out forwards;
+    animation-play-state: paused;
 }
 
 .timeline::before {
@@ -278,9 +437,17 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.about-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    
+    .about-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
 
 .about-list {

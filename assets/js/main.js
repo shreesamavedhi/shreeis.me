@@ -46,8 +46,22 @@ setInterval(drawMatrixRain, 33);
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
-// Animate sections on scroll
+// Animate sections and shapes on scroll
 document.querySelectorAll('section').forEach(section => {
+    // Trigger shape animations
+    if (section.classList.contains('skills') || 
+        section.classList.contains('experience') || 
+        section.classList.contains('projects')) {
+        gsap.to(section, {
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 80%',
+                onEnter: () => section.querySelector('::before').style.animationPlayState = 'running'
+            }
+        });
+    }
+
+    // Existing section animations
     gsap.from(section, {
         opacity: 0,
         y: 50,
