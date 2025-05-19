@@ -1,140 +1,150 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Hamburger menu toggle
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  
-  if (hamburger) {
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-  }
-  
-  // Close mobile menu when clicking on a nav link
-  const navItems = document.querySelectorAll('.nav-links a');
-  
-  navItems.forEach(item => {
-    item.addEventListener('click', function() {
-      if (hamburger.classList.contains('active')) {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-      }
-    });
-  });
-  
-  // Smooth scrolling for navigation links
-  navItems.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 70, // Adjust for fixed header
-          behavior: 'smooth'
-        });
-        
-        // Update URL without page reload
-        history.pushState(null, null, targetId);
-      }
-    });
-  });
-  
-  // Highlight active section in navigation
-  window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY + 100; // Adjust for fixed header
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        // Remove active class from all links
-        navItems.forEach(link => {
-          link.classList.remove('active');
-        });
-        
-        // Add active class to current section link
-        const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-        if (activeLink) {
-          activeLink.classList.add('active');
+// Matrix Rain Effect
+const canvas = document.getElementById('matrix-rain');
+const ctx = canvas.getContext('2d');
+
+// Set canvas size
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Matrix rain characters
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}|\/?=+-_)(*&^%$#@!';
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+const drops = [];
+
+// Initialize drops
+for (let i = 0; i < columns; i++) {
+    drops[i] = 1;
+}
+
+// Draw matrix rain
+function drawMatrixRain() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#00aba9';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = characters[Math.floor(Math.random() * characters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
         }
-      }
-    });
-  });
-  
-  // Animated skill bars
-  function animateSkillBars() {
-    const skillSection = document.querySelector('.skills-section');
-    if (!skillSection) return;
-    
-    const skillLevels = document.querySelectorAll('.skill-level');
-    const sectionPosition = skillSection.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3;
-    
-    if (sectionPosition < screenPosition) {
-      skillLevels.forEach(level => {
-        const width = level.style.width;
-        level.style.width = '0';
-        setTimeout(() => {
-          level.style.width = width;
-        }, 100);
-      });
-      // Remove event listener once animation is triggered
-      window.removeEventListener('scroll', animateSkillBars);
+        drops[i]++;
     }
-  }
-  
-  window.addEventListener('scroll', animateSkillBars);
-  // Trigger once on page load for visible elements
-  animateSkillBars();
-  
-  // Form submission handling
-  const contactForm = document.querySelector('.contact-form form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      // Get form inputs
-      const nameInput = contactForm.querySelector('input[placeholder="Your Name"]');
-      const emailInput = contactForm.querySelector('input[placeholder="Your Email"]');
-      const subjectInput = contactForm.querySelector('input[placeholder="Subject"]');
-      const messageInput = contactForm.querySelector('textarea');
-      
-      // Basic validation
-      if (nameInput.value.trim() === '' || 
-          emailInput.value.trim() === '' || 
-          subjectInput.value.trim() === '' || 
-          messageInput.value.trim() === '') {
-        alert('Please fill in all fields');
-        return;
-      }
-      
-      // Email validation
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailInput.value)) {
-        alert('Please enter a valid email address');
-        return;
-      }
-      
-      // Normally we would send this to a server, but for now just show a success message
-      alert('Message sent successfully!');
-      contactForm.reset();
+}
+
+setInterval(drawMatrixRain, 33);
+
+// GSAP Animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate sections on scroll
+document.querySelectorAll('section').forEach(section => {
+    gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: 1
+        }
     });
-  }
-  
-  // Back to top button smooth scroll
-  const backToTopBtn = document.querySelector('.back-to-top a');
-  if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
 });
+
+// Profile card flip
+const profileCard = document.querySelector('.profile-card');
+if (profileCard) {
+    profileCard.addEventListener('click', () => {
+        profileCard.classList.toggle('flipped');
+    });
+}
+
+// Skill items hover effect
+document.querySelectorAll('.skill-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        gsap.to(item, {
+            scale: 1.05,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    item.addEventListener('mouseleave', () => {
+        gsap.to(item, {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Timeline items animation
+document.querySelectorAll('.timeline-item').forEach(item => {
+    gsap.from(item, {
+        opacity: 0,
+        x: item.classList.contains('left') ? -50 : 50,
+        scrollTrigger: {
+            trigger: item,
+            start: 'top 80%',
+            end: 'top 60%',
+            scrub: 1
+        }
+    });
+});
+
+// Project cards hover effect
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            y: -10,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            y: 0,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Form submission handling
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                contactForm.reset();
+                alert('Message sent successfully!');
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            alert('Error sending message. Please try again.');
+        }
+    });
+}

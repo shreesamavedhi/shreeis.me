@@ -1,521 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Samavedhi - Resume</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="logo">
-        <h1>Shree<span>.</span></h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
-  </nav>
+---
+layout: default
+---
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Shree Samavedhi</h1>
-          <h2>Software Engineer</h2>
-          <p>Creating innovative solutions through code</p>
-          <div class="hero-btns">
-            <a href="#contact" class="btn primary-btn">Contact Me</a>
-          </div>
+<section id="about" class="hero">
+    <div class="section-content">
+        <div class="about-container">
+            <div class="profile-card">
+                <div class="profile-image-container">
+                    <div class="profile-image-flipper">
+                        <div class="profile-image-front">
+                            <img src="/assets/images/headshot.jpeg" alt="Profile Picture" class="profile-image">
+                        </div>
+                        <div class="profile-image-back">
+                            <div class="flip-content">
+                                <i class="fas fa-code-branch"></i>
+                                <p>Full Stack Developer</p>
+                                <p>& Security Expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1>Shree Samavedhi</h1>
+                <p class="title">Software Engineer & Cybersecurity Specialist</p>
+                <p class="subtitle">Passionate about securing the digital world</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>Hi there! I'm a cybersecurity specialist with a passion for building secure, scalable systems. With over 5 years of experience in the field, I specialize in:</p>
+                <ul class="about-list">
+                    <li><i class="fas fa-shield-alt"></i> Application Security & Penetration Testing</li>
+                    <li><i class="fas fa-brain"></i> AI-Powered Security Solutions</li>
+                    <li><i class="fas fa-lock"></i> Cryptography & Secure System Design</li>
+                    <li><i class="fas fa-network-wired"></i> Zero Trust Architecture</li>
+                </ul>
+                <p>When I'm not securing systems, you can find me participating in CTF competitions, contributing to open-source security projects, or mentoring aspiring cybersecurity professionals.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span>5+ Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security-First Approach</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>15+ Projects Completed</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-          <img src="assets/images/headshot.jpeg" alt="Shree Samavedhi">
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="about-content">
-        <div class="about-text">
-          <p>I am a passionate Software Engineer with a strong foundation in computer engineering principles. My expertise lies in developing scalable networking solutions and building efficient applications.</p>
-          <p>With a detail-oriented approach and a commitment to excellence, I strive to create elegant solutions to complex problems. I am constantly learning and expanding my skill set to stay at the forefront of technology.</p>
-          <div class="personal-info">
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Sunnyvale, CA</span>
+<section id="skills">
+    <div class="section-content">
+        <h2><i class="fas fa-code"></i> Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security</h3>
+                <p>Penetration Testing, Vulnerability Assessment, Security Auditing</p>
             </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <span>shree.samavedhi@example.com</span>
+            <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <h3>Programming</h3>
+                <p>Python, JavaScript, Java, C++</p>
             </div>
-            <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <span>(123) 456-7890</span>
+            <div class="skill-item">
+                <i class="fas fa-network-wired"></i>
+                <h3>Networking</h3>
+                <p>TCP/IP, Wireshark, Network Security</p>
             </div>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/username" target="_blank"><i class="fab fa-twitter"></i></a>
-          </div>
+            <div class="skill-item">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud</h3>
+                <p>AWS, Azure, Cloud Security</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-lock"></i>
+                <h3>Cryptography</h3>
+                <p>Encryption, PKI, Hash Functions</p>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-bug"></i>
+                <h3>Malware Analysis</h3>
+                <p>Reverse Engineering, Static/Dynamic Analysis</p>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Skills</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="skills-content">
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-item">
-              <i class="fab fa-js skill-icon"></i>
-              <div class="skill-icon-name">JavaScript</div>
-              <div class="skill-icon-description">Self-taught through web development projects at Cisco</div>
+<section id="education">
+    <div class="section-content">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Georgia Institute of Technology</h3>
+                <p class="timeline-date">2020 - 2022</p>
+                <p>Master of Science in Cybersecurity</p>
+                <ul>
+                    <li>Specialized in Network Security and Cryptography</li>
+                    <li>Research focus on AI-powered Threat Detection</li>
+                    <li>GPA: 3.95/4.0</li>
+                </ul>
             </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-python skill-icon"></i>
-              <div class="skill-icon-name">Python</div>
-              <div class="skill-icon-description">University coursework and research projects</div>
+            <div class="timeline-item">
+                <h3>University of California, Berkeley</h3>
+                <p class="timeline-date">2016 - 2020</p>
+                <p>Bachelor of Science in Computer Science</p>
+                <ul>
+                    <li>Minor in Mathematics</li>
+                    <li>Dean's List all semesters</li>
+                    <li>Led Cybersecurity Club projects</li>
+                </ul>
             </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-java skill-icon"></i>
-              <div class="skill-icon-name">Java</div>
-              <div class="skill-icon-description">Core language in computer science curriculum</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fas fa-code skill-icon"></i>
-              <div class="skill-icon-name">C++</div>
-              <div class="skill-icon-description">Advanced coursework in systems programming</div>
-            </div>
-          </div>
         </div>
-        
-        <div class="skill-category">
-          <h3>Web Technologies</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-item">
-              <i class="fab fa-react skill-icon"></i>
-              <div class="skill-icon-name">React</div>
-              <div class="skill-icon-description">Developed frontend applications during internship</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-node-js skill-icon"></i>
-              <div class="skill-icon-name">Node.js</div>
-              <div class="skill-icon-description">Created RESTful APIs for various projects</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-html5 skill-icon"></i>
-              <div class="skill-icon-name">HTML5</div>
-              <div class="skill-icon-description">Foundational knowledge from online courses</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-css3-alt skill-icon"></i>
-              <div class="skill-icon-name">CSS3</div>
-              <div class="skill-icon-description">Self-taught through building responsive websites</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Tools & Platforms</h3>
-          <div class="skill-icons">
-            <div class="skill-icon-item">
-              <i class="fab fa-docker skill-icon"></i>
-              <div class="skill-icon-name">Docker</div>
-              <div class="skill-icon-description">Container orchestration for cloud projects</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-aws skill-icon"></i>
-              <div class="skill-icon-name">AWS</div>
-              <div class="skill-icon-description">Certified AWS Solutions Architect Associate</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-git-alt skill-icon"></i>
-              <div class="skill-icon-name">Git</div>
-              <div class="skill-icon-description">Version control for all personal and team projects</div>
-            </div>
-            <div class="skill-icon-item">
-              <i class="fab fa-linux skill-icon"></i>
-              <div class="skill-icon-name">Linux</div>
-              <div class="skill-icon-description">Advanced shell scripting and system administration</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Education Section -->
-  <section id="education" class="section education-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Education</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="timeline" id="education-timeline">
-        <div class="timeline-controls">
-          <button class="timeline-scroll-btn timeline-scroll-left" aria-label="Scroll left">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="timeline-scroll-btn timeline-scroll-right" aria-label="Scroll right">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <div class="timeline-items-container">
-          <div class="timeline-item active" data-content-id="edu-1">
-            <div class="timeline-item-year">2018-2022</div>
-            <div class="timeline-item-title">BS Computer Engineering</div>
-          </div>
-          <div class="timeline-item" data-content-id="edu-2">
-            <div class="timeline-item-year">2014-2018</div>
-            <div class="timeline-item-title">High School</div>
-          </div>
-        </div>
-        <div class="timeline-content-container">
-          <div class="timeline-content active" id="edu-1">
-            <div class="timeline-header">
-              <h3>Bachelor of Science in Computer Engineering</h3>
-              <p class="timeline-date">2018 - 2022</p>
+<section id="experience">
+    <div class="section-content">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Senior Security Engineer</h3>
+                <p class="timeline-date">2022 - Present</p>
+                <p>Microsoft, Redmond</p>
+                <ul>
+                    <li>Lead a team of 5 security engineers in cloud infrastructure protection</li>
+                    <li>Implemented zero-trust architecture reducing security incidents by 60%</li>
+                    <li>Developed automated security scanning tools using Python and Azure</li>
+                </ul>
             </div>
-            <p class="timeline-institution">University of Illinois at Urbana-Champaign</p>
-            <p class="timeline-description">
-              Graduated with honors. Recipient of the William C. Kerchner Scholarship. Specialized in Systems and Architecture with a minor in Artificial Intelligence. Participated in ACM student chapter and completed capstone project on distributed systems optimization.
-            </p>
-          </div>
-          <div class="timeline-content" id="edu-2">
-            <div class="timeline-header">
-              <h3>High School Diploma</h3>
-              <p class="timeline-date">2014 - 2018</p>
+            <div class="timeline-item">
+                <h3>Security Consultant</h3>
+                <p class="timeline-date">2020 - 2022</p>
+                <p>Deloitte, San Francisco</p>
+                <ul>
+                    <li>Conducted security assessments for Fortune 500 clients</li>
+                    <li>Led red team operations and penetration testing</li>
+                    <li>Developed security frameworks and best practices</li>
+                </ul>
             </div>
-            <p class="timeline-institution">Lafayette Senior High School, Wildwood, Missouri</p>
-            <p class="timeline-description">
-              Graduated with a 4.0 GPA. Member of the National Honor Society. President of the Computer Science Club and participated in multiple programming competitions. Advanced Placement courses in Computer Science, Physics, and Calculus.
-            </p>
-          </div>
+            <div class="timeline-item">
+                <h3>Software Engineer</h3>
+                <p class="timeline-date">2018 - 2020</p>
+                <p>Google, Mountain View</p>
+                <ul>
+                    <li>Developed secure microservices using Go and Kubernetes</li>
+                    <li>Implemented OAuth 2.0 authentication systems</li>
+                    <li>Contributed to open-source security projects</li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section experience-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Experience</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="timeline" id="experience-timeline">
-        <div class="timeline-controls">
-          <button class="timeline-scroll-btn timeline-scroll-left" aria-label="Scroll left">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="timeline-scroll-btn timeline-scroll-right" aria-label="Scroll right">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+<section id="projects">
+    <div class="section-content">
+        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="/assets/images/project1.jpg" alt="Quantum Cryptography" class="project-image">
+                <div class="project-content">
+                    <h3>Quantum-Safe Encryption System</h3>
+                    <p>Developed a post-quantum cryptography implementation using lattice-based algorithms to protect against quantum computing threats.</p>
+                    <div class="project-tags">
+                        <span>C++</span>
+                        <span>Cryptography</span>
+                        <span>Quantum</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/project2.jpg" alt="AI Security" class="project-image">
+                <div class="project-content">
+                    <h3>AI-Powered Threat Detection</h3>
+                    <p>Built a machine learning system that analyzes network traffic patterns to detect and prevent zero-day attacks in real-time.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Security</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/project3.jpg" alt="Blockchain" class="project-image">
+                <div class="project-content">
+                    <h3>Secure Smart Contract Framework</h3>
+                    <p>Created a framework for developing and auditing secure smart contracts with automated vulnerability detection.</p>
+                    <div class="project-tags">
+                        <span>Solidity</span>
+                        <span>Ethereum</span>
+                        <span>Web3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/project4.jpg" alt="Zero Trust" class="project-image">
+                <div class="project-content">
+                    <h3>Zero Trust Architecture Platform</h3>
+                    <p>Designed and implemented a zero trust security platform for microservices architecture using service mesh.</p>
+                    <div class="project-tags">
+                        <span>Go</span>
+                        <span>Istio</span>
+                        <span>Kubernetes</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="timeline-items-container">
-          <div class="timeline-item active" data-content-id="exp-1">
-            <div class="timeline-item-year">2022</div>
-            <div class="timeline-item-title">Cisco</div>
-          </div>
-          <div class="timeline-item" data-content-id="exp-2">
-            <div class="timeline-item-year">2021-2022</div>
-            <div class="timeline-item-title">Research Assistant</div>
-          </div>
-          <div class="timeline-item" data-content-id="exp-3">
-            <div class="timeline-item-year">2021</div>
-            <div class="timeline-item-title">Microsoft</div>
-          </div>
-          <div class="timeline-item" data-content-id="exp-4">
-            <div class="timeline-item-year">2020</div>
-            <div class="timeline-item-title">Web Developer</div>
-          </div>
-          <div class="timeline-item" data-content-id="exp-5">
-            <div class="timeline-item-year">2019-2020</div>
-            <div class="timeline-item-title">Teaching Assistant</div>
-          </div>
-          <div class="timeline-item" data-content-id="exp-6">
-            <div class="timeline-item-year">2019</div>
-            <div class="timeline-item-title">IT Support</div>
-          </div>
-        </div>
-        <div class="timeline-content-container">
-          <div class="timeline-content active" id="exp-1">
-            <div class="timeline-header">
-              <h3>Software Engineering Intern</h3>
-              <p class="timeline-date">May 2022 - August 2022</p>
-            </div>
-            <p class="timeline-company">Cisco Systems - Cloud Networking Team</p>
-            <ul class="timeline-details">
-              <li>Contributed to the development of cloud networking solutions for enterprise customers</li>
-              <li>Implemented microservices using Node.js and Docker for scalable network management tools</li>
-              <li>Built a dashboard for real-time network performance monitoring using React</li>
-              <li>Collaborated with senior engineers to optimize API response times by 40%</li>
-              <li>Participated in Agile development practices including daily stand-ups and sprint planning</li>
-            </ul>
-          </div>
-          <div class="timeline-content" id="exp-2">
-            <div class="timeline-header">
-              <h3>Research Assistant</h3>
-              <p class="timeline-date">August 2021 - May 2022</p>
-            </div>
-            <p class="timeline-company">University Research Lab</p>
-            <ul class="timeline-details">
-              <li>Conducted research on distributed systems and network optimization algorithms</li>
-              <li>Developed a simulation framework in Python to test network congestion scenarios</li>
-              <li>Implemented and evaluated machine learning models to predict network traffic patterns</li>
-              <li>Co-authored a paper published in the university's undergraduate research journal</li>
-              <li>Presented findings at the Annual Computer Engineering Student Symposium</li>
-            </ul>
-          </div>
-          <div class="timeline-content" id="exp-3">
-            <div class="timeline-header">
-              <h3>Software Developer Intern</h3>
-              <p class="timeline-date">January 2021 - August 2021</p>
-            </div>
-            <p class="timeline-company">Microsoft - Azure Cloud Services</p>
-            <ul class="timeline-details">
-              <li>Developed cloud-native solutions using Azure Functions and Logic Apps</li>
-              <li>Implemented CI/CD pipelines for automated testing and deployment</li>
-              <li>Created monitoring dashboards for service reliability metrics</li>
-              <li>Participated in code reviews and contributed to documentation</li>
-            </ul>
-          </div>
-          <div class="timeline-content" id="exp-4">
-            <div class="timeline-header">
-              <h3>Web Development Intern</h3>
-              <p class="timeline-date">May 2020 - December 2020</p>
-            </div>
-            <p class="timeline-company">Local Tech Startup</p>
-            <ul class="timeline-details">
-              <li>Built responsive front-end interfaces using React and Material UI</li>
-              <li>Integrated REST APIs for data fetching and state management</li>
-              <li>Implemented user authentication and authorization features</li>
-              <li>Worked with a small team in a fast-paced startup environment</li>
-            </ul>
-          </div>
-          <div class="timeline-content" id="exp-5">
-            <div class="timeline-header">
-              <h3>Teaching Assistant</h3>
-              <p class="timeline-date">September 2019 - April 2020</p>
-            </div>
-            <p class="timeline-company">University Computer Science Department</p>
-            <ul class="timeline-details">
-              <li>Assisted professor in teaching Data Structures & Algorithms course</li>
-              <li>Held weekly office hours to help students with programming assignments</li>
-              <li>Graded homework and provided detailed feedback to students</li>
-              <li>Created supplementary learning materials for complex topics</li>
-            </ul>
-          </div>
-          <div class="timeline-content" id="exp-6">
-            <div class="timeline-header">
-              <h3>IT Support Intern</h3>
-              <p class="timeline-date">June 2019 - August 2019</p>
-            </div>
-            <p class="timeline-company">Local Government Office</p>
-            <ul class="timeline-details">
-              <li>Provided technical support for department staff of 50+ employees</li>
-              <li>Troubleshot and resolved hardware and software issues</li>
-              <li>Assisted in upgrading network infrastructure and security measures</li>
-              <li>Documented technical procedures for future reference</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Network Traffic Analyzer">
-          </div>
-          <div class="project-content">
-            <h3>Network Traffic Analyzer</h3>
-            <p>A real-time network monitoring tool that uses machine learning to detect anomalies and potential security threats in network traffic. Implemented during my internship at Cisco.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>Wireshark API</span>
-              <span>Flask</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/shreesamavedhi/network-analyzer" target="_blank"><i class="fab fa-github"></i> View Code</a>
-              <a href="#" target="_blank"><i class="fas fa-file-alt"></i> Case Study</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SmartCampus IoT System">
-          </div>
-          <div class="project-content">
-            <h3>SmartCampus IoT System</h3>
-            <p>A comprehensive IoT solution for university campuses that monitors building occupancy, energy usage, and environmental conditions. Senior capstone project that won first place in the engineering expo.</p>
-            <div class="project-tech">
-              <span>C++</span>
-              <span>Arduino</span>
-              <span>React</span>
-              <span>AWS IoT</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/shreesamavedhi/smart-campus" target="_blank"><i class="fab fa-github"></i> View Code</a>
-              <a href="#" target="_blank"><i class="fas fa-trophy"></i> Award Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1593642532781-03e79bf5bec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Distributed Computing Framework">
-          </div>
-          <div class="project-content">
-            <h3>Distributed Computing Framework</h3>
-            <p>A lightweight framework for distributing computational tasks across multiple nodes, built during my research assistantship. Achieves 40% better performance than traditional MapReduce for specific workloads.</p>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Docker</span>
-              <span>Kubernetes</span>
-              <span>gRPC</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/shreesamavedhi/distributed-framework" target="_blank"><i class="fab fa-github"></i> View Code</a>
-              <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> Research Paper</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img">
-            <img src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Secure Messaging App">
-          </div>
-          <div class="project-content">
-            <h3>Secure Messaging Protocol</h3>
-            <p>An end-to-end encrypted messaging protocol with perfect forward secrecy and zero-knowledge authentication. Implemented as a proof-of-concept for my Computer Security course.</p>
-            <div class="project-tech">
-              <span>Rust</span>
-              <span>WebRTC</span>
-              <span>Cryptography</span>
-              <span>WebAssembly</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/shreesamavedhi/secure-protocol" target="_blank"><i class="fab fa-github"></i> View Code</a>
-              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
+<section id="contact">
+    <div class="section-content">
         <h2>Contact Me</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Get In Touch</h3>
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Location</h4>
-              <p>Sunnyvale, California</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p>shree.samavedhi@example.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <h4>Phone</h4>
-              <p>(123) 456-7890</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://twitter.com/username" target="_blank"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-        <div class="contact-form">
-          <h3>Send Message</h3>
-          <form>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required>
+                <input type="text" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Your Email" required>
+                <input type="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
-            <div class="form-group">
-              <textarea placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn primary-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2025 Shree Samavedhi. All Rights Reserved.</p>
-        <div class="back-to-top">
-          <a href="#home"><i class="fas fa-arrow-up"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/timeline.js"></script>
-</body>
-</html>
+</section>

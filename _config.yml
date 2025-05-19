@@ -1,42 +1,16 @@
-# Site settings
-title: Shree Samavedhi
-email: contact@shreeis.me
-description: >-
-  Shree Samavedhi's personal resume and portfolio website.
+title: Shree's Portfolio
+description: Software Engineer & Cybersecurity Enthusiast
 baseurl: ""
 url: "https://shreeis.me"
 
-# Social links
-github_username: shreesamavedhi
-linkedin_username: shree-samavedhi-bb784619a
-
-# Build settings
 markdown: kramdown
+
 plugins:
+  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
 
-# Navigation sections
-resume_sections:
-  - name: about
-    title: About
-  - name: experience
-    title: Work Experience
-  - name: education
-    title: Education
-  - name: skills
-    title: Skills
-  - name: projects
-    title: Projects
-  - name: contact
-    title: Contact
-
-# Exclude from processing
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/
   - README.md
