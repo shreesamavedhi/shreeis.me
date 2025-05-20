@@ -40,8 +40,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     animation: carousel 15s infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .carousel-slide::after {
@@ -59,8 +60,8 @@
 .carousel-slide:nth-child(3) { animation-delay: 10s; }
 
 @keyframes carousel {
-    0%, 26.66% { opacity: 1; }
-    33.33%, 93.33% { opacity: 0; }
+    0%, 30% { opacity: 1; }
+    33.33%, 96.66% { opacity: 0; }
     100% { opacity: 1; }
 }
 
@@ -83,8 +84,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     animation: carousel 15s infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .carousel-slide::after {
