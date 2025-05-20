@@ -1,4 +1,28 @@
 /* Navigation */
+.nav-toggle {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 11px));
+    transition: all 0.3s ease-in-out;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -1293,21 +1317,26 @@ Skills Grid
 
 .hamburger {
     display: block;
-    position: relative;
-    width: 24px;
+    position: absolute;
+    width: 20px;
     height: 2px;
     background: var(--text);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: all 0.3s ease-in-out;
+    transform-origin: center;
 }
 
 .hamburger::before,
 .hamburger::after {
     content: '';
     position: absolute;
-    width: 24px;
+    width: 20px;
     height: 2px;
     background: var(--text);
     transition: all 0.3s ease-in-out;
+    left: 0;
 }
 
 .hamburger::before {
@@ -1324,11 +1353,13 @@ Skills Grid
 
 .nav-toggle.active .hamburger::before {
     transform: rotate(45deg);
+    transform-origin: center;
     top: 0;
 }
 
 .nav-toggle.active .hamburger::after {
     transform: rotate(-45deg);
+    transform-origin: center;
     bottom: 0;
 }
 
