@@ -1208,15 +1208,16 @@ Skills Grid
     display: block;
     border-radius: 8px;
     object-fit: cover;
+    border: 1px solid var(--accent2);
 }
 
 .about-image-back {
-    background-color: var(--background);
+    background-color: var(--accent2);
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--accent2);
 }
 
 .about-list {
