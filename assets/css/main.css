@@ -792,8 +792,45 @@ h2::after {
     margin-bottom: 4rem;
     position: relative;
     padding-left: 3rem;
-    border-left: 2px solid var(--primary);
     padding-bottom: 2rem;
+    border-left: 2px solid var(--primary);
+}
+
+.timeline-item .company-roles {
+    margin-top: 2rem;
+}
+
+.timeline-item .role-item {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.timeline-item .role-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1px;
+    background-color: var(--primary);
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.role-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.role-item ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
 }
 
 .timeline-item h3 {

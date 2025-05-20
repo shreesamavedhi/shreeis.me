@@ -18,7 +18,7 @@ layout: default
                     <div class="profile-image-back">
                         <div class="flip-content">
                             <i class="fas fa-code-branch"></i>
-                            <p>Full Stack Developer</p>
+                            <p>Full-Stack Developer</p>
                         </div>
                     </div>
                 </div>
@@ -148,34 +148,59 @@ layout: default
         <h2><i class="fas fa-briefcase"></i> Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Software Engineer</h3>
-                <p class="timeline-date">May 2023 - May 2025</p>
-                <p>Cisco Systems, San Jose</p>
-                <ul>
-                    <li>Collaborated with a team of 10+ engineers to develop, test, troubleshoot, and maintain backend services for a centralized network management platform</li>
-                    <li>Discovered a data minimization solution for storage of ethernet ports, reduced entry size by 40x</li>
-                    <li>Designed a traversal algorithm to count/display nested network policy status</li>
-                </ul>
+                <h3>Cisco Systems</h3>
+                <p>San Jose, CA</p>
+                <div class="company-roles">
+                    <div class="role-item">
+                        <h4>Software Engineer</h4>
+                        <p class="timeline-date">May 2023 - May 2025</p>
+                        <ul>
+                            <li>Collaborated with a team of 10+ engineers to develop, test, troubleshoot, and maintain backend services for a centralized network management platform</li>
+                            <li>Discovered a data minimization solution for storage of ethernet ports, reduced entry size by 40x</li>
+                            <li>Designed a traversal algorithm to count/display nested network policy status</li>
+                        </ul>
+                    </div>
+                    <div class="role-item">
+                        <h4>Recruitment Team Lead</h4>
+                        <p class="timeline-date">Aug 2023 - May 2025</p>
+                        <ul>
+                            <li>Led a team of three to foster a new recruitment initiative, organizing approaches to attract early-in-career employees</li>
+                        </ul>
+                    </div>
+                    <div class="role-item">
+                        <h4>SWE Intern</h4>
+                        <p class="timeline-date">May 2022 - Aug 2022</p>
+                        <ul>
+                            <li>Built a full-stack enterprise-level website to track internal cloud billing for department-wide usage</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="timeline-item">
-                <h3>Security Consultant</h3>
-                <p class="timeline-date">2020 - 2022</p>
-                <p>Deloitte, San Francisco</p>
-                <ul>
-                    <li>Conducted security assessments for Fortune 500 clients</li>
-                    <li>Led red team operations and penetration testing</li>
-                    <li>Developed security frameworks and best practices</li>
-                </ul>
+                <h3>Synchrony Financial</h3>
+                <p>Champaign, Illinois</p>
+                <div class="company-roles">
+                    <div class="role-item">
+                        <h4>Emerging Technology Intern</h4>
+                        <p class="timeline-date">Jan 2022 - May 2022</p>
+                        <ul>
+                            <li>Created a pdf and web data extraction/analysis tool with an automated Python/RPA solution</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="timeline-item">
-                <h3>Software Engineer</h3>
-                <p class="timeline-date">2018 - 2020</p>
-                <p>Google, Mountain View</p>
-                <ul>
-                    <li>Developed secure microservices using Go and Kubernetes</li>
-                    <li>Implemented OAuth 2.0 authentication systems</li>
-                    <li>Contributed to open-source security projects</li>
-                </ul>
+                <h3>Burns & McDonnell</h3>
+                <p>Chicago, Illinois</p>
+                <div class="company-roles">
+                    <div class="role-item">
+                        <h4>Substation Intern</h4>
+                        <p class="timeline-date">May 2021 - Aug 2021</p>
+                        <ul>
+                            <li>Identified and spearheaded an automated python solution for manual data transfer, saving a minimum of $30,000/year in manual labor</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -186,50 +211,46 @@ layout: default
         <h2><i class="fas fa-project-diagram"></i> Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="/assets/images/projects/project1.jpg" alt="Quantum Cryptography" class="project-image">
+                <img src="/assets/images/projects/project1.png" alt="Wizard Wars Game" class="project-image">
                 <div class="project-content">
-                    <h3>Quantum-Safe Encryption System</h3>
-                    <p>Developed a post-quantum cryptography implementation using lattice-based algorithms to protect against quantum computing threats.</p>
+                    <h3>Love2D Wizard Wars Game</h3>
+                    <p>Developed during the "2024 Winter Melon Game Jam". Wizard Wars is a 2D Pixel Boss-Rush in which players control a wizard character and navigate through generated levels while defeating powerful bosses. Additional mechanics include state tracking to handle both a shop and a save function.</p>
+                    <div class="project-tags">
+                        <span>Lua</span>
+                        <span>Love2D</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/projects/project2.png" alt="FPGA Pacman Game" class="project-image">
+                <div class="project-content">
+                    <h3>FPGA Pacman Game</h3>
+                    <p>Implemented a FPGA-based Pac-Man game, operable with USB-in/VGA-out, processed by a NIOS II core. Wrote SystemVerilog for the following elements: Pac-Man/Ghosts, Fruits, VGA Controller, Color Mapper, and HexDrivers</p>
+                    <div class="project-tags">
+                        <span>SystemVerilog</span>
+                        <span>NIOS II</span>
+                        <span>FPGA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/assets/images/projects/project3.png" alt="Enhanced Unsharp Mask Filtering" class="project-image">
+                <div class="project-content">
+                    <h3>Enhanced Unsharp Mask Filtering</h3>
+                    <p>Conducted a case study to compare the visual difference in using Gaussian Blur versus a Bilateral Filter. Authored a research paper and presented findings for reducing the halo effect during the image filtering process.</p>
                     <div class="project-tags">
                         <span>C++</span>
-                        <span>Cryptography</span>
-                        <span>Quantum</span>
+                        <span>Image Processing</span>
                     </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="/assets/images/projects/project2.jpg" alt="AI Security" class="project-image">
+                <img src="/assets/images/projects/project4.jpg" alt="Hardware Battleships" class="project-image">
                 <div class="project-content">
-                    <h3>AI-Powered Threat Detection</h3>
-                    <p>Built a machine learning system that analyzes network traffic patterns to detect and prevent zero-day attacks in real-time.</p>
+                    <h3>Hardware Battleships</h3>
+                    <p>Developed during the "2020 Pulse Visions Hardware Hackathon". Constructed a pure hardware model of a “Battleships” style game. Our model consisted of SR latches, Tri-State Buffer, Photo-resistors, LEDs, and a custom laser-printed base.</p>
                     <div class="project-tags">
-                        <span>Python</span>
-                        <span>TensorFlow</span>
-                        <span>Security</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="/assets/images/projects/project3.jpg" alt="Blockchain" class="project-image">
-                <div class="project-content">
-                    <h3>Secure Smart Contract Framework</h3>
-                    <p>Created a framework for developing and auditing secure smart contracts with automated vulnerability detection.</p>
-                    <div class="project-tags">
-                        <span>Solidity</span>
-                        <span>Ethereum</span>
-                        <span>Web3</span>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="/assets/images/projects/project4.jpg" alt="Zero Trust" class="project-image">
-                <div class="project-content">
-                    <h3>Zero Trust Architecture Platform</h3>
-                    <p>Designed and implemented a zero trust security platform for microservices architecture using service mesh.</p>
-                    <div class="project-tags">
-                        <span>Go</span>
-                        <span>Istio</span>
-                        <span>Kubernetes</span>
+                        <span>Hardware</span>
                     </div>
                 </div>
             </div>
@@ -240,7 +261,7 @@ layout: default
 <section id="contact">
     <div class="section-content">
         <h2>Contact Me</h2>
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvgaybrj" method="POST">
             <div class="form-group">
                 <input type="text" name="name" placeholder="Your Name" required>
             </div>
